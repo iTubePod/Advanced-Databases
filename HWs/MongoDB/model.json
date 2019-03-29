@@ -1,0 +1,64 @@
+db.Grupo.Insert(
+    {
+        "id":1,
+        "nombre":"Grindelia hirsutula Hook. & Arn. var. hallii (Steyerm. ex Rothr.) M.A. Lane"
+    }
+)
+
+db.Alumnos.Insert(
+    {
+        "id":1,
+        "nombre":"Rolfe",
+        "apellido":"Stivens",
+        "matricula":"78-856-6228",
+        "genero":"Male",
+        "grupo":
+        {
+            "id":9
+        }
+    }
+)
+
+db.Profesores.Insert(
+    {
+        "id":1,
+        "nombre":"Jillene",
+        "apellido":"O'Glessane",
+        "nomina":"56-419-0100",
+        "genero":"Female", 
+        "practicas": [1,3]
+    }
+)
+
+db.Examenes.Insert(
+    {
+        "id":1,
+        "numero_preguntas":97,
+        "fecha":"6/16/2018"
+    }
+)
+
+db.Practicas.Insert(
+    {   
+        "id":1,
+        "titulo":"Limnocorax flavirostra",
+        "nivel_dificultad":7
+    }
+)
+
+db.Examen_Alumno.InsertMany(
+    {   
+        "examen":1,
+        "alumno":1,
+        "calificacion":91
+    }
+)
+
+db.Alumnos_Practica.InsertMany(
+    {   
+        "alumno":1,
+        "practica":1,
+        "calificacion":26
+    }
+)
+
